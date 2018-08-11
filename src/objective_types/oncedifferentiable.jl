@@ -17,8 +17,7 @@ OnceDifferentiable(f, x::AbstractArray,
                    F::Real = real(zero(eltype(x))),
                    DF::AbstractArray = alloc_DF(x, F); inplace = true, autodiff = :finite) =
     OnceDifferentiable(f, x, F, DF, autodiff)
-#OnceDifferentiable(f, x::AbstractArray, F::AbstractArray; autodiff = :finite) =
-#    OnceDifferentiable(f, x::AbstractArray, F::AbstractArray, alloc_DF(x, F))
+
 function OnceDifferentiable(f, x::AbstractArray,
                    F::AbstractArray, DF::AbstractArray = alloc_DF(x, F);
                    inplace = true, autodiff = :finite)
